@@ -1,0 +1,52 @@
+<ion-side-menus enable-menu-with-back-views="true">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-balanced">
+      <ion-nav-back-button></ion-nav-back-button>
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="side-menu21"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left" id="side-menu21">
+    <ion-header-bar class="bar-balanced">
+      <div class="title">Menu</div>
+    </ion-header-bar>
+    <ion-content padding="false" class="side-menu-left has-header ">
+      <div>
+        <center>
+          <br>
+          <img ng-src="{{app.user.userInfo.imageData||app.defaults.images.imgPerson}}" width="100px">
+          <br>
+          <p class="dark" style="margin-top:-10px;"> {{webuser.info.email||''}}</p>
+          <p class="positive" style="margin-top:-10px;" ng-click="userAction('user','popupView',null,null)">{{webuser.info.displayName||''}}</p>
+
+        </center>
+
+        <div class="button-bar">
+          <!--SIGNED IN-->
+          <button class="button button-energized button-block button-icon"></button>
+          <button ng-click="userAction('user','popupView',null,null)" menu-close="" class="button button-energized button-clear button-icon icon ion-gear-a"></button>
+          <button ng-click="userAction('user','signOut',null,null)" menu-close="" class="button button-assertive button-clear button-icon icon ion-log-out assertive"></button>
+          <button class="button button-assertive button-block button-icon assertive"></button>
+        </div>
+        <!--button-bar-->
+      </div>
+      <ion-list id="menu-list1" class="mainmenu">
+        <ion-item class="item-icon-left" id="menu-list-item1" ui-sref="menu.home()" menu-close="" ng-click="userAction('nav','home',null,null)">
+          <i class="icon ion-home"></i>Home</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item79" ui-sref="menu.pentadbir()" menu-close="" ng-show="false">
+          <i class="icon ion-ios-people"></i>Pentadbir</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item81" ui-sref="menu.penyelaras()" menu-close="" ng-show="false">
+          <i class="icon ion-ios-people"></i>Penyelaras</ion-item>
+        <ion-item class="item-icon-left" id="menu-list-item88" ui-sref="menu.pengurus()" menu-close="" ng-show="false">
+          <i class="icon ion-ios-people"></i>Pengurus</ion-item>
+        <ion-item class="item-icon-left balanced" id="menu-list-item89" ui-sref="menu.moderator()" menu-close="" ng-show="true">
+          <i class="icon ion-ios-people"></i>Moderator</ion-item>
+        <ion-item class="item-icon-left energized" id="menu-list-item90" ui-sref="presetTopik()" menu-close="" ng-show="true">
+          <i class="icon ion-ios-people"></i>Preset</ion-item>
+      </ion-list>
+      <button id="menu-button10" ng-hide="EzziUser.appl.admn==undefined" class="button button-positive button-block">Tap me!</button>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

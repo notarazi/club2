@@ -1,0 +1,30 @@
+<ion-view title="Kumpulan Usrah" hide-back-button="true" cache-view="false" id="page81" class="bg-grad">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-energized icon No Icon" ng-click="userAction('nav','back',null,null)"> CANCEL</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-calm icon No Icon" ng-click="userAction('rec','new',null,null)"> ADD</button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <ion-list id="kumpulanUsrah-list12">
+      <div class="label1"> Kategori Usrah</div>
+    </ion-list>
+    <div id="kumpulanUsrah-container7" class="styled-container">
+      <ion-list id="kumpulanUsrah-list5">
+        <ion-item class="item-divider" id="kumpulanUsrah-list-item-divider2"> Kumpulan Usrah</ion-item>
+        <ion-item id="kumpulanUsrah-list-item95" ui-sref="pertemuanUsrah()" ng-repeat="item in listMain" ng-click="userAction('rec','open',null,item)" on-hold="userAction('rec','edit',null,item)">
+          <b>{{item.refr}} </b>
+          <br>{{item.desc}}
+          <br> {{item.locn}}
+          <br>
+          <small>{{ recoEdit.estartdate | date: "yyyy-MM-dd" }}</small>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="button-bar">
+      <button ng-click="userAction('nav','back',null,null)" style="border-radius:10px 10px 10px 10px;" class="button button-energized button-small button-block">CANCEL</button>
+      <button class="button button-positive button-block button-clear"></button>
+      <button class="button button-positive button-block button-clear"></button>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,22 @@
+<ion-view title="Preset Subtopik" hide-back-button="true" cache-view="false" id="page87" class="bg-grad">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-energized icon No Icon" ng-click="userAction('nav','back',null,item)"> CANCEL</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-calm icon No Icon" ng-click="userAction('rec','new',null,null)"> ADD</button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div>{{appl.nodes.wgrp_study.preset.topic.desc}}</div>
+    <div id="presetSubtopik-container12" class="styled-container">
+      <ion-list id="presetSubtopik-list17">
+        <ion-item class="item-divider" id="presetSubtopik-list-item-divider6"> Preset Topik</ion-item>
+        <ion-item id="presetSubtopik-list-item102" ng-repeat="item in listMain" on-hold="userAction('rec','edit',null,item)">{{item.desc}}</ion-item>
+      </ion-list>
+    </div>
+    <div class="button-bar">
+      <button ng-click="userAction('nav','back',null,null)" style="border-radius:10px 10px 10px 10px;" class="button button-energized button-small button-block">CANCEL</button>
+      <button class="button button-positive button-block button-clear"></button>
+      <button class="button button-positive button-block button-clear"></button>
+    </div>
+  </ion-content>
+</ion-view>

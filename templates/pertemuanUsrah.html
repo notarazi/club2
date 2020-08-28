@@ -1,0 +1,32 @@
+<ion-view title="Pertemuan Usrah" hide-back-button="true" cache-view="false" id="page82" class="bg-grad">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-energized icon No Icon" ng-click="userAction('nav','back',null,null)"> CANCEL</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-calm icon No Icon" ng-click="userAction('rec','new',null,null)"> ADD</button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <ion-list id="pertemuanUsrah-list10">
+      <div class="label1">
+        {{appl.nodes.wgrp_study['0']['refr']}} , {{appl.nodes.wgrp_study['0']['desc']}} , {{appl.nodes.wgrp_study['0']['locn']}} , {{appl.nodes.wgrp_study['0']['estartdate']| date: "yyyy-MM-dd"}} ,
+      </div>
+    </ion-list>
+    <div id="pertemuanUsrah-container8" class="styled-container">
+      <ion-list id="pertemuanUsrah-list8">
+        <ion-item class="item-divider" id="pertemuanUsrah-list-item-divider3"> Pertemuan Usrah</ion-item>
+        <ion-item id="pertemuanUsrah-list-item98" ng-click="userAction('rec','open',null,item)" on-hold="userAction('rec','edit',null,item)" ng-repeat="item in listMain">
+          <b>{{item.refr}} </b>
+          <br>{{item.desc}}
+          <br> {{item.locn}}
+          <br>
+          <small>{{ recoEdit.estartdate | date: "yyyy-MM-dd" }}</small>
+        </ion-item>
+      </ion-list>
+    </div>
+    <div class="button-bar">
+      <button ng-click="userAction('nav','back',null,null)" style="border-radius:10px 10px 10px 10px;" class="button button-energized button-small button-block">CANCEL</button>
+      <button class="button button-positive button-block button-clear"></button>
+      <button class="button button-positive button-block button-clear"></button>
+    </div>
+  </ion-content>
+</ion-view>

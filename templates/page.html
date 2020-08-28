@@ -1,0 +1,27 @@
+<ion-view title="Page" id="page65">
+  <ion-content padding="true" class="has-header">
+    <a href-inappbrowser="page66" id="page-button15" class="button button-positive button-block">Tap me!</a>
+    <form id="page-form1" class="list">
+      <label class="item item-input" id="page-input1">
+        <span class="input-label">Input</span>
+        <input type="text" placeholder="" ng-model="strDateValue">
+      </label>
+      <ion-item id="page-list-item92">Item</ion-item>
+    </form>
+    <div class="item item-icon-left" ion-datetime-picker="" date="" ng-model="data.dateValue">
+      <i class="icon ion-ios-calendar positive"></i>
+      date:
+      <strong>{{data.dateValue| date: "yyyy-MM-dd"}}</strong>
+
+    </div>
+    <div id="page-markdown1" class="show-list-numbers-and-dots">
+      <p style="color:#000000;">{{data.dateValue.getTime()}}</p>
+    </div>
+    <ion-list id="page-list6">
+      <ion-item class="item-icon-left item-icon-right" id="page-list-item96">
+        <i class="icon ion-ionic"></i>Item
+        <i class="icon ion-ios-people"></i>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

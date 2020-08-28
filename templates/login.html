@@ -1,0 +1,36 @@
+<ion-view title="Login" hide-back-button="true" cache-view="false" nav-transition="none" id="page30" style="background-color:#F6F2F2;" class="bg-grad">
+  <ion-nav-buttons side="left" scroll="false" class="has-header">
+    <button class="button icon No Icon" ng-click="userAction('nav','intro',null,null)"> Intro</button>
+  </ion-nav-buttons>
+  <ion-content padding="false" scroll="false" class="has-header">
+    <div class="spacer" style="width: 320px; height: 41px;"></div>
+    <div id="login-container5" class="bg-plain fixed-container pad10px rounded-container centered">
+      <div class="spacer" style="width: 320px; height: 36px;"></div>
+      <div>
+        <img src="{{imageData}}" style="display: block; width: 40%; height: auto; margin-left: auto; margin-right: auto;">
+      </div>
+      <h2 id="login-heading2" style="color:#000000;font-weight:600;">CLUB1</h2>
+      <div>
+        <div style="height:10px"></div>
+        <div ng-show="!webuser.isSignedIn">
+          <center>
+            <div class="button-bar">
+              <button ng-click="userAction('user','signIn',null,null)" class="button button-balanced">MASUK</button>
+              <button ng-click="userAction('user','signUp',null,null)" class="button button-calm">DAFTAR</button>
+            </div>
+          </center>
+          <button ng-click="userAction('user','resetPassword',null,null)" style="border-radius:5px 5px 5px 5px;" class="button button-block button-icon assertive">
+            <small>Forget Password?</small>
+          </button>
+
+        </div>
+        <div ng-show="webuser.isSignedIn" class="button-bar">
+          <button class="button button-energized button-block button-icon"></button>
+          <button ng-click="userAction('user','popupView',null,null)" menu-close="" class="button button-energized button-clear button-icon icon ion-gear-a"></button>
+          <button ng-click="userAction('user','signOut',null,null)" menu-close="" class="button button-assertive button-clear button-icon icon ion-log-out assertive"></button>
+          <button style="border-radius:5px 5px 5px 5px;" class="button button-assertive button-block button-icon assertive"></button>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,21 @@
+<ion-view title="Preset Topik" hide-back-button="true" cache-view="false" id="page85" class="bg-grad">
+  <ion-nav-buttons side="left" class="has-header">
+    <button class="button button-energized icon No Icon" ng-click="userAction('nav','back',null,item)"> CANCEL</button>
+  </ion-nav-buttons>
+  <ion-nav-buttons side="right" class="has-header">
+    <button class="button button-calm icon No Icon" ng-click="userAction('rec','new',null,null)"> ADD</button>
+  </ion-nav-buttons>
+  <ion-content padding="true" class="has-header">
+    <div id="presetTopik-container11" class="styled-container">
+      <ion-list id="presetTopik-list16">
+        <ion-item class="item-divider" id="presetTopik-list-item-divider10"> Preset Topik</ion-item>
+        <ion-item id="presetTopik-list-item103" ng-repeat="item in listMain" on-hold="userAction('rec','edit',null,item)" ng-click="userAction('rec','open',null,item)">{{item.desc}}</ion-item>
+      </ion-list>
+    </div>
+    <div class="button-bar">
+      <button ng-click="userAction('nav','back',null,null)" style="border-radius:10px 10px 10px 10px;" class="button button-energized button-small button-block">CANCEL</button>
+      <button class="button button-positive button-block button-clear"></button>
+      <button class="button button-positive button-block button-clear"></button>
+    </div>
+  </ion-content>
+</ion-view>
